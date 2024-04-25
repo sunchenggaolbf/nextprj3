@@ -1,18 +1,37 @@
 /* Menu.module.css */
 
 .nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    padding: 10px 0;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .nav a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a; /* 深色背景 */
+  padding: 20px 0; /* 上下内边距增加到 20px */
+  font-family: Arial, sans-serif; /* 使用 Arial 字体或 sans-serif 作为默认字体 */
+}
+
+.nav a {
+  color: #ffffff; /* 白色链接文本 */
+  text-decoration: none;
+  font-size: 16px; /* 链接字体大小 */
+  transition: color 0.3s ease; /* 设置颜色过渡效果 */
+}
+
+.nav a:hover {
+  color: #ff6f61; /* 链接悬停时的颜色 */
+}
+
+.nav a:focus {
+  outline: none; /* 移除链接聚焦时的默认轮廓样式 */
+}
+
+.nav a::after {
+  content: ''; /* 使用伪元素创建链接下划线 */
+  display: block;
+  width: 0;
+  height: 2px; /* 下划线高度 */
+  background-color: #ff6f61; /* 下划线颜色 */
+  transition: width 0.3s ease; /* 设置下划线宽度过渡效果 */
+}
+
+.nav a:hover::after {
+  width: 100%; /* 悬停时下划线展开到 100% 宽度 */
+}
