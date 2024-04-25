@@ -1,7 +1,7 @@
 export default function Page(){
     return (
         <>
-        <h1>menu1 page!</h1>
+        <h1>this is menu1 page!</h1>
         </>
     );
 }
