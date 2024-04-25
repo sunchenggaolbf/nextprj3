@@ -12,7 +12,7 @@ export default function Layout({ children }: Props) {
     <html>
       <body>
         <header>
-          <h1>Home Layout</h1>
+          <h1>LBF株式会社</h1>
           <Menu />
         </header>
         <main>{children}</main>

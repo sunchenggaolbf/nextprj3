@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import styles from '../styles/Menu.module.css';
+import IconLink from "./IconLink";
+import { Stack } from 'react-bootstrap'
 
-export default function Menu() {
-  return (
-    <nav className={styles.nav}>
-      <Link href='/'>Home</Link>
-      <Link href='/menu1'>menu1</Link>
-      <Link href='/menu2'>menu2</Link>
-      <Link href='/menu3'>menu3</Link>
-    </nav>
-  );
+export default function Nav() {
+    return (
+        <Stack gap={3}>
+            <IconLink href="/" icon="HouseFill">公司首页</IconLink>
+            <IconLink href="/menu1" icon="CardList">论坛</IconLink>
+            <IconLink href="/menu2" icon="CardList">通知事项</IconLink>
+            <IconLink href="/menu3" icon="CardList">以往成绩</IconLink>
+        </Stack>
+    );
 }
